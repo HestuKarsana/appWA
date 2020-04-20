@@ -19,7 +19,7 @@ class OpenWATab extends Component {
     this.callToNumber.bind(this);
   }
 
-  async componentWillMount() {
+  async UNSAFE_componentWillMount() {
     const currentLocale = await Expo.DangerZone.Localization.getCurrentDeviceCountryAsync();
     const dialCode = countryCodes.filter( country => country.code === currentLocale);
     // auto select the current device country code

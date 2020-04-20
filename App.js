@@ -1,9 +1,9 @@
 import React from 'react';
-import Expo from 'expo';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
 import {Container, Header, Body, Title, StyleProvider, Footer} from 'native-base';
 import getTheme from './native-base-theme/components';
 import theme from './native-base-theme/variables/variables';
+import Constants from 'expo-constants';
 
 import HomeTabs from './src/home/tabs/HomeTabs';
 import FooterAds from './src/ads/FooterAds';
@@ -16,7 +16,7 @@ export default class App extends React.Component {
     };
   }
 
-  async componentWillMount() {
+  async UNSAFE_componentWillMount() {
     await Expo.Font.loadAsync({
       'Roboto': require('native-base/Fonts/Roboto.ttf'),
       'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
@@ -34,11 +34,10 @@ export default class App extends React.Component {
           <View style={styles.statusBar} />
           <Header>
             <Body>
-            <Title>{Expo.Constants.manifest.name}</Title>
+            <Title>{Constants.manifest.name}</Title>
             </Body>
           </Header>
           <HomeTabs/>
-          <FooterAds/>
         </Container>
       </StyleProvider>
     );

@@ -13,7 +13,7 @@ class HistoryTab extends Component {
     // this.selectPhoneItem.bind(this);
   }
 
-  async componentWillMount() {
+  async UNSAFE_componentWillMount() {
     try {
       const allRecords = await AsyncStorage.getItem('history') || '[]';
       this.setState({

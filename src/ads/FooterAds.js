@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {AdMobBanner} from 'expo';
+import {AdMobBanner} from 'expo-ads-admob';
 import {Footer} from 'native-base';
 
 class FooterAds extends Component {
