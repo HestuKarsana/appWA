@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Send WhatsApp Message",
+    "description": "This project is really great.",
+    "slug": "open-in-whatsapp",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tequilapps.openinwhatsapp"
+    },
+    "android": {
+      "package": "com.tequilapps.openinwhatsapp"
+    }
+  }
+}
